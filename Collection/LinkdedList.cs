@@ -25,14 +25,14 @@ namespace Collection
                 }
                 temp.next = node;
             }
-            Console.WriteLine("Inserted into Linked List : {0}", node.data);
+            Console.WriteLine("Inserted into Linked List :  {0}", node.data);
         }
         internal void Display()
         {
             Node temp = this.head;
             if(temp==null)
             {
-                Console.WriteLine("Linked List is Empty");
+                Console.WriteLine(" Linked List is Empty ");
             }
            while(temp!=null)
             {
