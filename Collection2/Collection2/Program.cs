@@ -8,7 +8,8 @@
             linkdedList.Add(56);
             linkdedList.Add(30);
             linkdedList.Add(70);
-            linkdedList.Search(30);
+            //linkdedList.Search(30);
+            linkdedList.InsertAtParticularPosition(3,40);
             linkdedList.Display();
         }
     }
