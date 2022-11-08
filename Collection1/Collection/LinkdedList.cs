@@ -74,5 +74,33 @@ namespace Collection
             }
             return head;
         }
+         internal Node RemoveFirstNode()
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            head = head.next;
+            return head;
+        }
+         public void Display()
+        {
+            
+            int i = 1;
+            Node temp = head;
+
+            Console.WriteLine();
+            if (temp == null)   
+            {
+                Console.WriteLine("LinkedList is Empty");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine($"Element {i} in Linked List is : " + temp.data);
+                temp = temp.next; 
+                i++;
+
+            }
+        }
     }
 }
