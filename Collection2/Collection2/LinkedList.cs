@@ -112,6 +112,30 @@ namespace Collection2
             }
             return null;
         }
+        public void deleteAtParticularPosition(int position,int data)
+        {
+            if (head == null)
+            {
+                return;
+            }
+            Node temp = head;
+            if (position == 0)
+            {
+                head = temp.next;
+                return;
+            }
+            for (int i = 1; temp != null && i < position - 1; i++)
+            {
+                temp = temp.next;
+            }
+            if (temp == null || temp.next == null)
+            {
+                return;
+            }
+            Node next1 = temp.next.next;
+            temp.next = next1;
+        }
+
         public void Display()
         {
 
