@@ -97,6 +97,21 @@ namespace Collection2
             newNode.next = null;
             return head;
         }
+        internal Node Search(int value)
+        {
+            int Count = 1;
+            while(head !=null)
+            {
+                if(head.data==value)
+                {
+                    Console.WriteLine($"The Value is {value} is: " + Count);
+                    return head;
+                }
+                head=head.next;
+                Count++;
+            }
+            return null;
+        }
         public void Display()
         {
 

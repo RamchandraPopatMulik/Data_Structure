@@ -8,10 +8,7 @@
             linkdedList.Add(56);
             linkdedList.Add(30);
             linkdedList.Add(70);
-            linkdedList.Display();
-            //linkdedList.InsertAtParticularPosition(2,30);
-            //linkdedList.RemoveFirstNode();
-            linkdedList.RemoveLastNode();
+            linkdedList.Search(30);
             linkdedList.Display();
         }
     }

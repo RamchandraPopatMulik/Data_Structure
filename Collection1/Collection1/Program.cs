@@ -12,7 +12,8 @@ namespace Collection1
             linkdedList.Add(70);
             linkdedList.Display();
             //linkdedList.InsertAtParticularPosition(2,30);
-            linkdedList.RemoveFirstNode();
+            //linkdedList.RemoveFirstNode();
+            linkdedList.RemoveLastNode();
             linkdedList.Display();
         }
     }

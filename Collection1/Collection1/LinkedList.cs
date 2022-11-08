@@ -83,6 +83,20 @@ namespace Collection1
             head = head.next;
             return head;
         }
+        internal Node RemoveLastNode()
+        {
+            if(head==null)
+            {
+                return null;
+            }
+            Node newNode = head;
+            while(newNode.next.next !=null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next= null;
+            return head;
+        }
         public void Display()
         {
 
