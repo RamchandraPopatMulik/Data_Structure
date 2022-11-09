@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace Collection2
     internal class LinkedList
     {
         internal Node head;
-        internal void Add(int data)
+        internal int Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -26,6 +27,7 @@ namespace Collection2
                 temp.next = node;
             }
             Console.WriteLine("Inserted into Linked List :  {0}", node.data);
+            return data;
         }
         //internal void Display()
         //{
@@ -135,11 +137,40 @@ namespace Collection2
             Node next1 = temp.next.next;
             temp.next = next1;
         }
+        public void SortedLinkedList(int data)
+        {
+            Node temp = head, index = null;
+
+            if (head == null)
+            {
+                return;
+            }
+            else
+            {
+                while (temp != null)
+                {
+                    index = temp.next;
+
+                    while (index != null)
+                    {
+                        if (temp.data > index.data)
+                        {
+                            data = temp.data;
+                            temp.data = index.data;
+                            index.data = data;
+                        }
+                        index = index.next;
+                    }
+                    temp = temp.next;
+                }
+            }
+        }
 
         public void Display()
         {
 
             int i = 1;
+            int size = 0;
             Node temp = head;
 
             Console.WriteLine();
@@ -151,9 +182,11 @@ namespace Collection2
             {
                 Console.WriteLine($"Element {i} in Linked List is : " + temp.data);
                 temp = temp.next;
+                size = i;
                 i++;
 
             }
+            Console.WriteLine("\nSize of Linked List is : " + size);
         }
     }
 }
